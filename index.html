@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Kindle — 3D 墨水屏阅读器</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2318191c'/%3E%3Crect x='8' y='6' width='16' height='20' rx='1.5' fill='%23f1efe7'/%3E%3Crect x='11' y='10' width='10' height='1.4' fill='%2318191c'/%3E%3Crect x='11' y='14' width='10' height='1.4' fill='%2318191c'/%3E%3Crect x='11' y='18' width='7' height='1.4' fill='%2318191c'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="stage">
+  <canvas id="gl"></canvas>
+  <div class="atmosphere"></div>
+  <div class="vignette"></div>
+  <div class="grain"></div>
+</div>
+
+<header class="brand">
+  <span class="led"></span>
+  <span class="wm">KINDLE</span>
+  <span class="slash">/</span>
+  <span class="sub">3D E-INK READER</span>
+</header>
+
+<div class="top-actions">
+  <button id="btnImport" class="ghost"><span class="plus">+</span> 导入 TXT</button>
+  <button id="btnFocus" class="ghost">聚焦阅读</button>
+  <button id="btnReset" class="ghost">复位视角</button>
+  <button id="btnFull" class="ghost" title="全屏">全屏</button>
+</div>
+
+<footer class="hints" id="hints">
+  <span>拖动旋转</span><i>·</i><span>滚轮缩放</span><i>·</i><span>点击屏幕操作</span><i>·</i><span>长按书籍管理</span>
+</footer>
+
+<div class="drop-mask" id="dropMask">
+  <div class="drop-inner">
+    <div class="drop-icon"></div>
+    <div class="drop-title">松开以导入</div>
+    <div class="drop-sub">TXT / MD &nbsp;·&nbsp; 支持 UTF-8 与 GBK</div>
+  </div>
+</div>
+
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <div class="wordmark">kindle</div>
+    <div class="lbar"><i></i></div>
+    <div class="ltext">正在点亮墨水屏</div>
+  </div>
+</div>
+
+<input type="file" id="fileInput" accept=".txt,.md,.markdown,text/plain,text/markdown" multiple hidden>
+<div class="toast" id="toast"></div>
+
+<script src="js/vendor/three.min.js"></script>
+<script src="js/store.js"></script>
+<script src="js/text.js"></script>
+<script src="js/ui-core.js"></script>
+<script src="js/ui-library.js"></script>
+<script src="js/ui-reader.js"></script>
+<script src="js/ui-settings.js"></script>
+<script src="js/scene.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
