@@ -1,6 +1,27 @@
+# OS / editor junk
 Thumbs.db
 .DS_Store
 desktop.ini
 *.log
+.vscode/
+.idea/
+
+# dependencies / caches
 node_modules/
 .tmp/
+**/.cache/
+.remotion/
+
+# cloned skill checkout (tooling only, not part of the project)
+.oss-video-skill/
+
+# video: Remotion build output; keep only the finished cut
+video/out/*
+!video/out/kindle-3d-promo.mp4
+video/build/
+
+# video: Playwright capture intermediates (raw recordings, frame dumps, screenshots)
+video/capture/raw/
+video/capture/frames/
+video/capture/shots/
+video/capture/*.webm
