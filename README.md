@@ -2,6 +2,8 @@
 
 **[在线使用 → wouigw.github.io/3dkindle](https://wouigw.github.io/3dkindle/)**　·　[演示视频](video/out/kindle-3d-promo.mp4)（30s，大部分画面为真实录屏）
 
+[![Deploy to GitHub Pages](https://github.com/wouigw/3dkindle/actions/workflows/pages.yml/badge.svg)](https://github.com/wouigw/3dkindle/actions/workflows/pages.yml)
+
 一台跑在浏览器里的 Kindle。设备由 Three.js 实时渲染，界面则用 Canvas 2D 绘制后作为贴图贴在墨水屏上——所以它既是一个可以换角度观看的 3D 物体，也是一套真正能用的图书管理 / 阅读软件。
 
 不是亚马逊的产品，也不连接任何服务器。
@@ -18,6 +20,14 @@
 python -m http.server 8000
 # 打开 http://localhost:8000
 ```
+
+## 部署
+
+阅读器是纯静态页面，线上版由 GitHub Actions 发布到 Pages（[`.github/workflows/pages.yml`](.github/workflows/pages.yml)）：
+
+1. 仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**（仅首次需要）
+2. 之后每次推送 `main` 都会自动构建并发布，只上传 `index.html`、`css/`、`js/`，不含 `video/` 素材
+3. 地址：<https://wouigw.github.io/3dkindle/>
 
 ## 它有什么
 
