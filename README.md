@@ -1,12 +1,16 @@
 # Kindle · 3D 墨水屏阅读器
 
+**[在线使用 → wouigw.github.io/3dkindle](https://wouigw.github.io/3dkindle/)**　·　[演示视频](video/out/kindle-3d-promo.mp4)（30s，大部分画面为真实录屏）
+
 一台跑在浏览器里的 Kindle。设备由 Three.js 实时渲染，界面则用 Canvas 2D 绘制后作为贴图贴在墨水屏上——所以它既是一个可以换角度观看的 3D 物体，也是一套真正能用的图书管理 / 阅读软件。
 
 不是亚马逊的产品，也不连接任何服务器。
 
 ## 运行
 
-直接双击 `index.html` 即可（无需构建、无需联网，Three.js 已放在本地）。
+**在线版**：打开 <https://wouigw.github.io/3dkindle/> 即可使用，无需安装；书籍与设置仍然只保存在你自己的浏览器里。
+
+本地运行：直接双击 `index.html` 即可（无需构建、无需联网，Three.js 已放在本地）。
 
 如果浏览器限制了 `file://` 下的存储，也可以起一个静态服务器：
 
@@ -69,3 +73,9 @@ js/
 ```
 
 样书均为公版文本；`The Wonderful Wizard of Oz` (1900) 与 `The Road Not Taken` (1916) 已进入公有领域。
+
+## 演示视频
+
+[video/out/kindle-3d-promo.mp4](video/out/kindle-3d-promo.mp4) — 30 秒，1920×1080。旋转、书库、翻页、目录、排版面板、夜间主题都是 Playwright 对真实应用的录屏，不是合成动画；片尾附项目地址。
+
+制作工程在 [`video/`](video/)，基于 Remotion + Playwright，重新录制与渲染的命令见 [`video/README.md`](video/README.md)。
