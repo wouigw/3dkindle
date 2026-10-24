@@ -18,6 +18,9 @@ node_modules/
 # video: Remotion build output; keep only the finished cut
 video/out/*
 !video/out/kindle-3d-promo.mp4
+!video/out/cover-16x9.jpg
+!video/out/cover-4x3.jpg
+!video/out/cover-9x16.jpg
 video/build/
 
 # video: Playwright capture intermediates (raw recordings, frame dumps, screenshots)
